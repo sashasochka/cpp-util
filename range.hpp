@@ -190,6 +190,9 @@ struct has_size {
 
     using type = decltype(check<C>(0));
     static constexpr bool value = type::value;
+    constexpr operator bool() {
+        return value;
+    }
 };
 
 } // namespace traits
