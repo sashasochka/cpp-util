@@ -175,3 +175,4 @@ namespace std {
 } // namespace std
 
 #endif // ndef BASE_PTR_HPP
+

@@ -221,3 +221,4 @@ indices(std::initializer_list<T>&& cont) {
 } } // namespace util::lang
 
 #endif // ndef UTIL_LANG_RANGE_HPP
+
