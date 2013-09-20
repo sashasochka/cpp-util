@@ -5,6 +5,8 @@
 *.slo
 *.lo
 *.o
+run
+a.out
 
 # Compiled Dynamic libraries
 *.so
