@@ -172,7 +172,12 @@ range_proxy<T> range(T begin, T end) {
 }
 
 template <typename T>
-infinite_range_proxy<T> range(T begin) {
+range_proxy<T> range(T end) {
+    return {T{}, end};
+}
+
+template <typename T>
+infinite_range_proxy<T> infinite_range(T begin) {
     return {begin};
 }
 
