@@ -1,9 +1,9 @@
-#ifndef BASE_PTR_HPP
-#define BASE_PTR_HPP
+#ifndef UTIL_PTR_HPP
+#define UTIL_PTR_HPP
 
 #include <memory>
 
-namespace base {
+namespace util {
 
 template <typename T>
 class ptr {
@@ -150,29 +150,29 @@ inline bool operator >=(std::nullptr_t, ptr<T> const& rhs) noexcept {
     return nullptr == rhs.get();
 }
 
-} // namespace base
+} // namespace util
 
 namespace std {
     template <typename T>
-    struct pointer_traits<base::ptr<T>> {
+    struct pointer_traits<util::ptr<T>> {
         using pointer = T*;
         using element_type = T;
         using difference_type = ptrdiff_t;
 
         template <typename U>
-        using rebind = base::ptr<U>;
+        using rebind = util::ptr<U>;
     };
 
     template <typename T>
-    struct hash<base::ptr<T>> {
+    struct hash<util::ptr<T>> {
         using result_type = size_t;
-        using argument_type = base::ptr<T>;
+        using argument_type = util::ptr<T>;
 
         result_type operator ()(argument_type const& p) const noexcept {
-            return std::hash<typename base::ptr<T>::pointer>()(p.get());
+            return std::hash<typename util::ptr<T>::pointer>()(p.get());
         }
     };
 } // namespace std
 
-#endif // ndef BASE_PTR_HPP
+#endif // ndef UTIL_PTR_HPP
 

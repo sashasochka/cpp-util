@@ -2,9 +2,10 @@
 #define UTIL_LANG_RANGE_HPP
 
 #include <iterator>
+#include <initializer_list>
 #include <type_traits>
 
-namespace util { namespace lang {
+namespace util {
 
 namespace detail {
 
@@ -218,7 +219,7 @@ indices(std::initializer_list<T>&& cont) {
     return {0, cont.size()};
 }
 
-} } // namespace util::lang
+} // namespace util
 
-#endif // ndef UTIL_LANG_RANGE_HPP
+#endif // ndef UTIL_RANGE_HPP
 

@@ -3,7 +3,7 @@
 
 #include <utility>
 
-namespace util { namespace lang {
+namespace util {
 
 template <typename F>
 struct named_operator_wrapper {
@@ -45,7 +45,7 @@ constexpr named_operator_wrapper<F> make_named_operator(F f) {
     return {f};
 }
 
-} } // namespace util::lang
+} // namespace util
 
 #endif // ndef UTIL_NAMED_OPERATOR_HPP
 

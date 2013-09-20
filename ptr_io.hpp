@@ -1,15 +1,15 @@
-#ifndef BASE_PTR_IO_HPP
-#define BASE_PTR_IO_HPP
+#ifndef UTIL_PTR_IO_HPP
+#define UTIL_PTR_IO_HPP
 
 #include <iostream>
 #include "ptr.hpp"
 
-namespace base {
+namespace util {
 template <typename T>
 inline std::ostream& operator <<(std::ostream& out, ptr<T> p) {
     return out << p.get();
 }
-} // namespace base
+} // namespace util
 
-#endif // ndef BASE_PTR_IO_HPP
+#endif // ndef UTIL_PTR_IO_HPP
 
